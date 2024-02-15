@@ -24,8 +24,6 @@ def factorial(n):
         raise ValueError("El factorial solo está definido para enteros no negativos")
     if n == 0:
         return 1
-    else:
-        return n * factorial(n - 1)
 
 def test_factorial_of_1_is_1():
     """
