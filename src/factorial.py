@@ -1,3 +1,7 @@
+"""
+Módulo que proporciona una función para calcular el factorial de un número entero no negativo.
+"""
+
 import pytest
 
 def factorial(n):
@@ -23,17 +27,30 @@ def factorial(n):
     else:
         return n * factorial(n - 1)
 
-
 def test_factorial_of_1_is_1():
+    """
+    Prueba unitaria para verificar que el factorial de 1 es igual a 1.
+    """
     assert factorial(1) == 1
 
 def test_factorial_raises_type_error_for_non_integer():
+    """
+    Prueba unitaria para verificar que se levanta un TypeError 
+    cuando se pasa un valor no entero a la función factorial.
+    """
     with pytest.raises(TypeError):
         factorial('a')
 
 def test_factorial_raises_value_error_for_negative_integer():
+    """
+    Prueba unitaria para verificar que se levanta un ValueError 
+    cuando se pasa un entero negativo a la función factorial.
+    """
     with pytest.raises(ValueError):
         factorial(-5)
 
 def test_factorial_of_5_is_120():
+    """
+    Prueba unitaria para verificar que el factorial de 5 es 120.
+    """
     assert factorial(5) == 120
