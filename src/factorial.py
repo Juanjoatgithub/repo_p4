@@ -1,6 +1,19 @@
 import pytest
 
 def factorial(n):
+    """
+    Calcula el factorial de un número entero no negativo.
+
+    Parameters:
+    n (int): El número entero para calcular el factorial.
+
+    Returns:
+    int: El factorial de n.
+
+    Raises:
+    TypeError: Si n no es un entero.
+    ValueError: Si n es un entero negativo.
+    """
     if not isinstance(n, int):
         raise TypeError("El factorial solo puede calcularse para enteros")
     if n < 0:
